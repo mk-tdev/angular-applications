@@ -1,1 +1,7 @@
-<p>app-forms works!</p>
+<div class="my-2 py-2">
+  <button mat-stroked-button color="primary" (click)="navigateTo('app-forms/simple-form')">Simple</button>
+  <button mat-stroked-button color="primary" (click)="navigateTo('app-forms/nested-form')">Nested</button>
+  <button mat-stroked-button color="primary" (click)="navigateTo('app-forms/dynamic-form')">Dynamic</button>
+</div>
+
+<router-outlet></router-outlet>

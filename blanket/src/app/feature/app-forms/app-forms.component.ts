@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app-forms',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppFormsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
+  navigateTo(where: string) {
+    this.router.navigate([`${where}`]);
+  }
 }

@@ -1,0 +1,25 @@
+<h2>Simple form</h2>
+
+<div class="m-3 p-3 border rounder">
+  My Form Value: {{myForm.value | json}}
+</div>
+
+<div class="d-flex justify-content-center m-3 p-3">
+  <form [formGroup]="myForm">
+    <mat-form-field class="w-100">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="test@email.com" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Message</mat-label>
+      <textarea matInput placeholder="message" formControlName="message"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="w-100">
+      <mat-label>Phone</mat-label>
+      <input matInput placeholder="test@email.com" formControlName="phone">
+    </mat-form-field>
+
+  </form>
+</div>
