@@ -1,0 +1,36 @@
+<div>
+  <p>Reactive Forms Way</p>
+</div>
+<mat-card>
+  <div class="d-flex flex-column">
+
+    <div>
+      <mat-form-field class="w-100">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="fav color" [formControl]="name">
+      </mat-form-field>
+    </div>
+    <div>
+      <p>Name is: {{name.value}} pristine?: {{name.pristine}}</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div>
+    <button mat-stroked-button color="primary" (click)="setName()">Set Name</button>
+  </div>
+</mat-card>
+
+<div class="m-2 py-2">
+  <button mat-stroked-button color="primary" routerLinkActive="active-route"
+    routerLink="/app-forms/reactive-form/simple" (click)="navigateTo('/app-forms/reactive-form/simple')">Simple</button>
+  <button mat-stroked-button color="primary" routerLinkActive="active-route"
+    routerLink="/app-forms/reactive-form/nested" (click)="navigateTo('/app-forms/reactive-form/nested')">Nested</button>
+  <button mat-stroked-button color="primary" routerLinkActive="active-route"
+    routerLink="/app-forms/reactive-form/dynamic"
+    (click)="navigateTo('/app-forms/reactive-form/dynamic')">Dynamic</button>
+</div>
+
+<div class="m-2">
+  <router-outlet></router-outlet>
+</div>

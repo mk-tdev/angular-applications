@@ -1,7 +1,10 @@
-<div class="my-2 py-2">
-  <button mat-stroked-button color="primary" (click)="navigateTo('app-forms/simple-form')">Simple</button>
-  <button mat-stroked-button color="primary" (click)="navigateTo('app-forms/nested-form')">Nested</button>
-  <button mat-stroked-button color="primary" (click)="navigateTo('app-forms/dynamic-form')">Dynamic</button>
+<div class="m-2 py-2">
+  <button mat-stroked-button color="primary" routerLinkActive="active-route" routerLink="/app-forms/reactive-form"
+    (click)="navigateTo('app-forms/reactive-form')">Reactive</button>
+  <button mat-stroked-button color="primary" routerLinkActive="active-route" routerLink="/app-forms/template-form"
+    (click)="navigateTo('app-forms/template-form')">Template</button>
 </div>
 
-<router-outlet></router-outlet>
+<div class="m-2">
+  <router-outlet></router-outlet>
+</div>
