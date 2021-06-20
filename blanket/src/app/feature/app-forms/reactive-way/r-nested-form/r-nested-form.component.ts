@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-r-nested-form',
@@ -23,7 +23,7 @@ export class RNestedFormComponent implements OnInit {
   ) { }
 
   phoneForm = this.fb.group({
-    deviceMake: [''],
+    deviceMake: ['', Validators.required],
     specs: this.fb.group({
       ram: [''],
       memory: [''],
