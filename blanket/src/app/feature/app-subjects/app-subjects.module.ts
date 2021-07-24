@@ -6,7 +6,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { BehaviourSubjectsComponent } from './behaviour-subjects/behaviour-subjects.component';
 import { ReplaySubjectsComponent } from './replay-subjects/replay-subjects.component';
 import { AsyncSubjectsComponent } from './async-subjects/async-subjects.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,6 +46,8 @@ import { AsyncSubjectsComponent } from './async-subjects/async-subjects.componen
         ]
       }
     ]),
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class AppSubjectsModule { }

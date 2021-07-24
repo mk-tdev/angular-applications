@@ -4,3 +4,23 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/mk-tdev/angular-applications.git
 git push -u origin main
+
+
+
+# angular cli
+https://angular.io/cli/new
+
+# Fav movies
+ng new my-fav-movies --skip-tests 
+ng add @angular/material
+npm i --save core-js express express-fileupload moment
+npm i -D @types/express ts-node codelyzer tslint
+
+#CSS Gradiant
+background-image: linear-gradient(to top, rgb(74, 144, 226), #009688);
+
+# Movies details
+https://www.imdb.com/?ref_=nv_home
+
+#temp
+https://github1s.com/angular-university/angular-forms-course/blob/1-start/server/server.ts#L19-L25
