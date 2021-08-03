@@ -4,7 +4,9 @@
 
     <form class="login-form data-form" #loginForm="ngForm">
       <mat-form-field>
-        <input matInput ngModel #email="ngModel" type="email" name="email" placeholder="Email" required>
+        <input matInput ngModel #email="ngModel" type="email" name="email" placeholder="Email" required minlength="3">
+        <mat-error *ngIf="email.errors?.required">Email is mandatory</mat-error>
+        <mat-error *ngIf="email.errors?.minlength">Email should be long</mat-error>
       </mat-form-field>
 
       <mat-form-field>
@@ -21,6 +23,13 @@
     </div>
     <div class="my-2">
       Email: {{email.value}} & password: {{password.value}}
+    </div>
+    <div class="my-2">
+      Valid?: {{loginForm.valid}}
+    </div>
+
+    <div class="my-2">
+      Email erros?: {{email.errors | json}}
     </div>
   </mat-card-content>
 </mat-card>
