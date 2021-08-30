@@ -68,10 +68,11 @@
     </div>
 
     <div class="col">
-      <label for=""><b>Kilometers</b></label>
+      <label for=""><b>Kilometers/Meters/CentiMeters</b></label>
 
-      <div>
-        {{miles | toKm}}
+      <!-- this can be done too -->
+      <div *ngIf="(miles | toKm: 'km') > 1">
+        {{miles | toKm: 'km' | number: '1.0-3'}}
       </div>
     </div>
   </div>
