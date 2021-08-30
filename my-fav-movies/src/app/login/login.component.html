@@ -4,7 +4,8 @@
 
     <form class="login-form data-form" #loginForm="ngForm">
       <mat-form-field>
-        <input matInput ngModel #email="ngModel" type="email" name="email" placeholder="Email" required minlength="3">
+        <input matInput ngModel #email="ngModel" type="email" name="email" placeholder="Email" required minlength="3"
+          pattern="[a-z]+">
         <mat-error *ngIf="email.errors?.required">Email is mandatory</mat-error>
         <mat-error *ngIf="email.errors?.minlength">Email should be long</mat-error>
       </mat-form-field>

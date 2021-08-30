@@ -1,0 +1,82 @@
+<div class="container">
+  <h3>Form with Pipes <a href="https://angular.io/api?type=pipe">Refer</a> </h3>
+  <div class="row my-2">
+    <div class="form-group col">
+      <label for="">Name</label>
+      <input class="form-control" type="text" (input)="onNameChange($event)">
+    </div>
+
+    <div class="col">
+      <label for=""><b>Name</b></label>
+
+      <div>
+        {{name | titlecase}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="form-group col">
+      <label for="">Date</label>
+      <input class="form-control" type="date" (input)="onDateChange($event)">
+    </div>
+
+    <div class="col">
+      <label for=""><b>Date</b></label>
+
+      <div>
+        {{date | date: "longDate"}}
+        {{currentDate | date: "h:mm:ss a"}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="form-group col">
+      <label for="">Amount</label>
+      <input class="form-control" type="number" (input)="onAmountChange($event)">
+    </div>
+
+    <div class="col">
+      <label for=""><b>Amount</b></label>
+
+      <div>
+        {{amount | currency: 'INR'}}
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="form-group col">
+      <label for="">Height</label>
+      <input class="form-control" type="number" (input)="onHeightChange($event)">
+    </div>
+
+    <div class="col">
+      <label for=""><b>Height</b></label>
+
+      <div>
+        {{height | number: '2.1-2' }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-2">
+    <div class="form-group col">
+      <label for="">Miles</label>
+      <input class="form-control" type="number" (input)="onMilesChange($event)">
+    </div>
+
+    <div class="col">
+      <label for=""><b>Kilometers</b></label>
+
+      <div>
+        {{miles | toKm}}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    {{userData | json}}
+  </div>
+</div>

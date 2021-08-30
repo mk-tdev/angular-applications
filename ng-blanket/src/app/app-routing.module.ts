@@ -8,10 +8,6 @@ const routes: Routes = [
     component: AppHomeComponent,
   },
   {
-    path: 'app-routes',
-    loadChildren: () => import('./feature/app-routing/app-routing.module').then(m => m.AppRoutingModule)
-  },
-  {
     path: 'app-forms',
     loadChildren: () => import('./feature/app-forms/app-forms.module').then(m => m.AppFormsModule)
   },
@@ -22,10 +18,6 @@ const routes: Routes = [
   {
     path: 'app-subjects',
     loadChildren: () => import('./feature/app-subjects/app-subjects.module').then(m => m.AppSubjectsModule)
-  },
-  {
-    path: 'app-ngrx',
-    loadChildren: () => import('./feature/app-ngrx/app-ngrx.module').then(m => m.AppNgrxModule)
   },
   {
     path: 'app-pipes',

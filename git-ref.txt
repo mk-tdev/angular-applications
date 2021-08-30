@@ -11,7 +11,7 @@ git push -u origin main
 https://angular.io/cli/new
 
 # Fav movies
-ng new my-fav-movies --skip-tests 
+ng new my-fav-movies --skip-tests
 ng add @angular/material
 npm i --save core-js express express-fileupload moment
 npm i -D @types/express ts-node codelyzer tslint
