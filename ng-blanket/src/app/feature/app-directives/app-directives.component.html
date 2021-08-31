@@ -1,0 +1,10 @@
+<div class="container">
+  <nav>
+    <ul class="pagination">
+      <li class="page-item" [ngClass]="{'active': i === activeImage}" *ngFor="let image of images; let i = index">
+        <a href="" class="page-link">{{i + 1}}</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>

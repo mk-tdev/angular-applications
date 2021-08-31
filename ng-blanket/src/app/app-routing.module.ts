@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./feature/app-pipes/app-pipes.module').then(m => m.AppPipesModule)
   },
   {
+    path: 'app-directives',
+    loadChildren: () => import('./feature/app-directives/app-directives.module').then(m => m.AppDirectivesModule)
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
