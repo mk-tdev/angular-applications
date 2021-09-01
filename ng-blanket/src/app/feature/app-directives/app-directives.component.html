@@ -1,10 +1,43 @@
+<!-- ngClass -->
+<!-- ngIf -->
+<!-- ngFor -->
+<!-- ngSwitch -->
+
+
 <div class="container">
   <nav>
     <ul class="pagination">
-      <li class="page-item" [ngClass]="{'active': i === activeImage}" *ngFor="let image of images; let i = index">
-        <a href="" class="page-link">{{i + 1}}</a>
+      <li class="page-item" [ngClass]="{'disabled': activePage === 0}">
+        <a (click)="activePage = activePage - 1" class="page-link">Prev</a>
+      </li>
+      <ng-container *ngFor="let image of images; let i = index">
+        <li class="page-item" [ngClass]="{'active': i === activePage}" *ngIf="checkWindowIndex(i)">
+          <a (click)="activePage = i" class="page-link">{{i + 1}}</a>
+        </li>
+      </ng-container>
+      <li class="page-item" [ngClass]="{'disabled': images.length - 1 === activePage}">
+        <a (click)="activePage = activePage + 1" class="page-link">Next</a>
       </li>
     </ul>
   </nav>
 
 </div>
+
+<div>
+  <!-- <h4 appStyleClass [elemColor]="'#336ede'">{{images[activePage].title}}</h4> -->
+  <!-- alternative way when the property and directive name is same -->
+  <h4 [appStyleClass]="'#336ede'">{{images[activePage].title}}</h4>
+  <img [src]="images[activePage].url" alt="image">
+</div>
+
+<!-- <div [ngSwitch]="activePage">
+  <p *ngSwitchCase="0">
+    Current Page 0
+  </p>
+  <p *ngSwitchCase="1">
+    Current Page 1
+  </p>
+  <p *ngSwitchDefault>
+    Current Page {{activePage + 1}}
+  </p>
+</div> -->
