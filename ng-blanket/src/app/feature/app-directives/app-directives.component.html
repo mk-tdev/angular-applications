@@ -5,17 +5,21 @@
 
 
 <div class="container">
+  <h3>Custom ngClass, ngFor Directive</h3>
+
   <nav>
     <ul class="pagination">
       <li class="page-item" [ngClass]="{'disabled': activePage === 0}">
         <a (click)="activePage = activePage - 1" class="page-link">Prev</a>
       </li>
-      <ng-container *ngFor="let image of images; let i = index">
+      <!-- <ng-container *ngFor="let image of images; let i = index"> -->
+      <ng-container *appNoOfTimes="images.length; let i=index">
         <li class="page-item" [ngClass]="{'active': i === activePage}" *ngIf="checkWindowIndex(i)">
           <a (click)="activePage = i" class="page-link">{{i + 1}}</a>
         </li>
       </ng-container>
-      <li class="page-item" [ngClass]="{'disabled': images.length - 1 === activePage}">
+      <!-- using appStyleClass instead of ngClass -->
+      <li class="page-item" [appStyleClass]="{'disabled': images.length - 1 === activePage}">
         <a (click)="activePage = activePage + 1" class="page-link">Next</a>
       </li>
     </ul>
@@ -27,7 +31,7 @@
   <!-- <h4 appStyleClass [elemColor]="'#336ede'">{{images[activePage].title}}</h4> -->
   <!-- alternative way when the property and directive name is same -->
   <h4 [appStyleClass]="'#336ede'">{{images[activePage].title}}</h4>
-  <img [src]="images[activePage].url" alt="image">
+  <img [src]="images[activePage].url" alt="image" style="height: 250px;">
 </div>
 
 <!-- <div [ngSwitch]="activePage">
@@ -41,3 +45,11 @@
     Current Page {{activePage + 1}}
   </p>
 </div> -->
+
+<div class="my-3"></div>
+
+<h3>Custom structural directive</h3>
+
+<ul *appNoOfTimes="activePage + 1; let i = index">
+  <li>Active Page no: {{activePage + 1}} {{i}}</li>
+</ul>

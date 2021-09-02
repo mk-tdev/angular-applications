@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { AppDirectivesComponent } from './app-directives.component';
 import { RouterModule } from '@angular/router';
 import { StyleClassDirective } from './style-class.directive';
+import { NoOfTimesDirective } from './no-of-times.directive';
 
 
 @NgModule({
   declarations: [
     AppDirectivesComponent,
-    StyleClassDirective
+    StyleClassDirective,
+    NoOfTimesDirective
   ],
   imports: [
     CommonModule,
