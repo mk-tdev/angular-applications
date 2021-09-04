@@ -24,7 +24,7 @@ export class AppDirectivesComponent implements OnInit {
       url: 'https://images.unsplash.com/photo-1506355683710-bd071c0a5828?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJpdmVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
     },
   ];
-  images = [...this.imagesSet, ...this.imagesSet, ...this.imagesSet, ...this.imagesSet]
+  images = [...this.imagesSet, ...this.imagesSet]
   activePage = 0;
 
   constructor() { }

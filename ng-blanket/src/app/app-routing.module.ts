@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./feature/app-directives/app-directives.module').then(m => m.AppDirectivesModule)
   },
   {
+    path: 'app-modules',
+    loadChildren: () => import('./feature/app-modules/app-modules.module').then(m => m.AppModulesModule)
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
